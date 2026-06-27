@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <rect width="900" height="600" fill="#ffffff"/>
+  <!-- Taegeuk circle -->
+  <g transform="translate(450,300)">
+    <circle r="120" fill="#ffffff" stroke="#0047A0" stroke-width="0"/>
+    <path d="M0,-120 A60,60 0 0 1 60,-60 A60,60 0 0 0 120,0 A120,120 0 0 0 0,-120 Z" fill="#CD2E3A"/>
+    <path d="M0,120 A60,60 0 0 1 -60,60 A60,60 0 0 0 -120,0 A120,120 0 0 0 0,120 Z" fill="#0047A0"/>
+    <path d="M0,-120 A120,120 0 0 0 0,120 A60,60 0 0 0 60,60 A60,60 0 1 1 0,-120 Z" fill="#CD2E3A"/>
+    <path d="M0,120 A120,120 0 0 0 0,-120 A60,60 0 0 0 -60,-60 A60,60 0 1 1 0,120 Z" fill="#0047A0"/>
+  </g>
+  <!-- trigrams (simplified, 4 corners) -->
+  <g fill="#000000">
+    <!-- top-left: geon (3 solid lines) -->
+    <g transform="translate(230,160)">
+      <rect x="-45" y="-30" width="90" height="12"/>
+      <rect x="-45" y="-5" width="90" height="12"/>
+      <rect x="-45" y="20" width="90" height="12"/>
+    </g>
+    <!-- bottom-right: gon (3 broken lines) -->
+    <g transform="translate(670,440)">
+      <rect x="-45" y="-30" width="38" height="12"/>
+      <rect x="7" y="-30" width="38" height="12"/>
+      <rect x="-45" y="-5" width="38" height="12"/>
+      <rect x="7" y="-5" width="38" height="12"/>
+      <rect x="-45" y="20" width="38" height="12"/>
+      <rect x="7" y="20" width="38" height="12"/>
+    </g>
+    <!-- top-right: ri -->
+    <g transform="translate(670,160)">
+      <rect x="-45" y="-30" width="90" height="12"/>
+      <rect x="-45" y="-5" width="38" height="12"/>
+      <rect x="7" y="-5" width="38" height="12"/>
+      <rect x="-45" y="20" width="90" height="12"/>
+    </g>
+    <!-- bottom-left: gam -->
+    <g transform="translate(230,440)">
+      <rect x="-45" y="-30" width="38" height="12"/>
+      <rect x="7" y="-30" width="38" height="12"/>
+      <rect x="-45" y="-5" width="90" height="12"/>
+      <rect x="-45" y="20" width="38" height="12"/>
+      <rect x="7" y="20" width="38" height="12"/>
+    </g>
+  </g>
+</svg>

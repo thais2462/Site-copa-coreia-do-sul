@@ -1,0 +1,157 @@
+/* ===================================================
+   CUSTOM THEME - COREIA DO SUL NA COPA DO MUNDO 2026
+   Paleta inspirada na bandeira Taegukgi
+   =================================================== */
+
+:root{
+	--kr-red:#CD2E3A;
+	--kr-blue:#0047A0;
+	--kr-dark:#101820;
+	--kr-white:#ffffff;
+	--kr-grey:#f4f6f9;
+}
+
+body{ color:#444; }
+
+/* ---------- NAVBAR ---------- */
+.site-navbar{ background:#ffffff; }
+.site-navbar .nav-link{ color:#1b2032 !important; font-weight:600; }
+.site-navbar .nav-link:hover, .site-navbar .active > .nav-link{ color:var(--kr-red) !important; }
+.site-logo img{ height:42px; }
+
+/* ---------- BUTTONS / ACCENTS (override template orange #ffaa17) ---------- */
+.hero-text a, .btn_one, .home_b_btn, .contact_btn, .subs_btn{
+	background:var(--kr-red) !important;
+	border-color:var(--kr-red) !important;
+}
+.hero-text a:hover, .btn_one:hover, .home_b_btn:hover, .contact_btn:hover, .subs_btn:hover{
+	background:var(--kr-blue) !important;
+}
+.section-title span, .progress-bar span{ background:var(--kr-red) !important; }
+.portfolio_filter li.active, .portfolio_filter li:hover{ color:var(--kr-red) !important; }
+a{ color:var(--kr-blue); }
+a:hover{ color:var(--kr-red); }
+
+/* ---------- HOME / HERO ---------- */
+.home_bg{
+	background:
+		linear-gradient(180deg, rgba(8,12,18,.55) 0%, rgba(8,12,18,.30) 50%, rgba(8,12,18,.55) 100%),
+		url(../img/custom/taegukgi-bg.svg);
+	background-size:cover; background-position:center;
+	height:auto; min-height:680px; display:flex; align-items:center;
+}
+.home_bg::after{
+	content:'';
+	position:absolute; inset:0;
+	background:rgba(5,8,12,.18);
+	pointer-events:none;
+}
+.home_bg .hero-text{ position:relative; padding:90px 0 60px; }
+.hero-text .badge-kr{
+	display:inline-block; background:rgba(8,12,18,.55); border:1px solid rgba(255,255,255,.4);
+	color:#fff; padding:8px 22px; border-radius:30px; font-size:13px; letter-spacing:2px; margin-bottom:22px;
+	text-transform:uppercase; font-weight:600; text-shadow:0 1px 6px rgba(0,0,0,.4);
+}
+.hero-text h2{ font-size:52px; font-weight:800; color:#fff; line-height:1.2; text-shadow:0 3px 18px rgba(0,0,0,.55); }
+.hero-text h2 span{ color:#ffd166; text-shadow:0 3px 18px rgba(0,0,0,.55); }
+.hero-text p{ color:#f1f3f8; font-size:18px; max-width:720px; margin:18px auto 0; text-shadow:0 2px 10px rgba(0,0,0,.5); }
+.hero-stats{ margin-top:45px; }
+.hero-stats .stat{ display:inline-block; padding:0 28px; border-right:1px solid rgba(255,255,255,.25); }
+.hero-stats .stat:last-child{ border-right:none; }
+.hero-stats .stat h3{ color:#fff; font-size:30px; font-weight:800; margin-bottom:0; text-shadow:0 2px 12px rgba(0,0,0,.55); }
+.hero-stats .stat span{ color:#e4e9f2; font-size:13px; text-transform:uppercase; letter-spacing:1px; text-shadow:0 1px 8px rgba(0,0,0,.5); }
+
+/* ---------- SECTION TOP (inner pages style banner reused as section divider) ---------- */
+.kr-divider{
+	background:linear-gradient(120deg, var(--kr-blue), var(--kr-red));
+	padding:46px 0; text-align:center; color:#fff;
+}
+.kr-divider h2{ color:#fff; font-weight:700; margin:0; }
+
+/* ---------- FEATURES (used as "Quick facts") ---------- */
+.single_feature{ border:1px solid #eee; transition:.3s; }
+.single_feature:hover{ border-color:var(--kr-red); box-shadow:0 15px 35px rgba(0,0,0,.08); transform:translateY(-4px); }
+.single_feature h4{ color:#1b2032; }
+.single_feature .flag-emoji{ font-size:42px; display:block; margin-bottom:18px; }
+
+/* ---------- COUNTER (campaign numbers) ---------- */
+.counter_feature{ background:var(--kr-dark) !important; }
+.counter-num{ color:#ffd166 !important; }
+.counter_feature h4{ color:#fff; }
+.single-project img{ filter:brightness(0) invert(1); opacity:.85; }
+
+/* ---------- GROUP TABLE ---------- */
+.group-table{ width:100%; border-collapse:collapse; background:#fff; box-shadow:0 10px 30px rgba(0,0,0,.06); }
+.group-table th{ background:var(--kr-dark); color:#fff; padding:14px 10px; font-size:13px; text-transform:uppercase; letter-spacing:1px; }
+.group-table td{ padding:14px 10px; text-align:center; border-bottom:1px solid #eee; font-weight:600; color:#333; }
+.group-table tr.kr-row{ background:rgba(205,46,58,.08); }
+.group-table td.team-name{ text-align:left; font-weight:700; }
+.group-table td.team-name .pos{ display:inline-block; width:22px; }
+.group-table img.flag-ic{ width:22px; margin-right:8px; vertical-align:middle; }
+
+/* ---------- MATCHES TIMELINE ---------- */
+.match-card{ background:#fff; border-radius:10px; padding:24px; box-shadow:0 10px 25px rgba(0,0,0,.06); margin-bottom:24px; border-left:5px solid var(--kr-blue); }
+.match-card.win{ border-left-color:#2ecc71; }
+.match-card.loss{ border-left-color:var(--kr-red); }
+.match-card .match-stage{ font-size:12px; text-transform:uppercase; letter-spacing:1px; color:#999; font-weight:700; }
+.match-card .match-score{ font-size:30px; font-weight:800; color:#1b2032; margin:6px 0; }
+.match-card .match-info{ font-size:13px; color:#888; }
+.match-card .scorers{ font-size:14px; color:#444; margin-top:8px; }
+
+/* ---------- PLAYERS / TEAM CARDS ---------- */
+.team_area{ background:var(--kr-grey); }
+.player-tabs{ text-align:center; margin-bottom:40px; }
+.player-tabs button{
+	background:#fff; border:2px solid var(--kr-blue); color:var(--kr-blue); font-weight:700;
+	padding:10px 26px; margin:0 6px 10px; border-radius:30px; cursor:pointer; transition:.25s; font-size:14px;
+}
+.player-tabs button.active, .player-tabs button:hover{ background:var(--kr-blue); color:#fff; }
+.single-team{ background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,.07); transition:.3s; }
+.single-team:hover{ transform:translateY(-6px); box-shadow:0 16px 32px rgba(0,0,0,.16); }
+.single-team img{ width:100%; display:block; aspect-ratio:300/340; object-fit:cover; }
+.single-team .player-info{ padding:16px 14px 20px; text-align:center; }
+.single-team h3{ font-size:17px; margin-bottom:2px; color:#1b2032; }
+.single-team .player-pos{ color:var(--kr-red); font-weight:600; font-size:13px; text-transform:uppercase; letter-spacing:.5px; }
+.single-team .player-club{ color:#888; font-size:12.5px; margin-top:4px; }
+.single-team .squad-number{
+	position:absolute; top:10px; left:10px; background:rgba(16,24,32,.75); color:#fff; font-weight:800;
+	font-size:13px; padding:3px 10px; border-radius:20px;
+}
+.our-team{ position:relative; margin-bottom:28px; }
+.captain-tag{
+	position:absolute; top:10px; right:10px; background:#ffd166; color:#1b2032; font-weight:800;
+	font-size:11px; padding:3px 9px; border-radius:20px; letter-spacing:.5px;
+}
+
+/* ---------- CURIOSITIES / ACCORDION CARDS ---------- */
+.fun-fact-card{
+	background:#fff; border-radius:10px; padding:28px 26px; height:100%; box-shadow:0 8px 22px rgba(0,0,0,.06);
+	border-top:4px solid var(--kr-red); transition:.25s;
+}
+.fun-fact-card:hover{ box-shadow:0 16px 32px rgba(0,0,0,.1); transform:translateY(-4px); }
+.fun-fact-card .ff-num{ font-size:38px; font-weight:800; color:rgba(0,71,160,.15); line-height:1; margin-bottom:8px; }
+.fun-fact-card h4{ color:#1b2032; margin-bottom:10px; }
+.fun-fact-card p{ font-size:14.5px; color:#666; margin-bottom:0; }
+
+/* ---------- WHY CHOOSE / HISTORY SECTION ---------- */
+.why_choose_area .single_why_choose h2{ font-size:32px; }
+.timeline-list{ list-style:none; padding:0; margin:0; }
+.timeline-list li{ padding:10px 0 10px 26px; border-left:3px solid var(--kr-blue); position:relative; margin-bottom:4px; }
+.timeline-list li::before{ content:''; position:absolute; left:-8px; top:16px; width:13px; height:13px; border-radius:50%; background:var(--kr-red); }
+.timeline-list li strong{ color:#1b2032; }
+
+/* ---------- TESTIMONIAL reused as "Quote" ---------- */
+.single_testimonial{ border-radius:10px; }
+.testimonial_img img{ border:3px solid var(--kr-red); }
+
+/* ---------- FOOTER ---------- */
+.footer{ background:var(--kr-dark) !important; }
+.footer_copyright p{ color:#9aa3b5; }
+.social_profile li a{ background:rgba(255,255,255,.08); }
+
+/* ---------- RESPONSIVE TWEAKS ---------- */
+@media (max-width:767px){
+	.hero-text h2{ font-size:34px; }
+	.hero-stats .stat{ display:block; border-right:none; margin-bottom:14px; }
+	.kr-divider h2{ font-size:24px; }
+}
